@@ -1,0 +1,42 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  width:100%;
+  background:$green;
+  padding:1.5em 1em;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  color: white;
+}
+
+header ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+header ul li {
+  display: inline;
+  font-size:1.5em;
+  padding:1em;
+}
+
+.right-aligned-header {
+  justify-content: flex-end;
+}
+
+.center-aligned-header {
+  justify-content: center;
+}
+
+.green {
+  background:$green;
+}

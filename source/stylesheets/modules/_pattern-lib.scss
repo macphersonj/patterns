@@ -1,10 +1,71 @@
-nav {
+body {
+  margin:0;
+  padding:0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.pattern-lib {
   width:25%;
   float:left;
   min-height:1px;
 }
 
+.pattern-lib ul {
+  list-style: none;
+  margin:0;
+  padding:0
+}
+
+.pattern-lib ul li {
+  font-size: 1.5em;
+  margin:1.5em 0
+}
+
 .content {
   width:75%;
   float:left;
+}
+
+header {
+  width:100%;
+  background:#efefef;
+  padding:1.5em 1em;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+header ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+header ul li {
+  display: inline;
+  font-size:1.5em;
+  padding:1em;
+}
+
+.logo {
+  width:40px;
+  float:left;
+  margin-right:1em;
+}
+
+.grid-visualised {
+  background: $green;
+  height:50px;
+  color:white;
+  margin-bottom:10px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-visualised:not(first-of-type) {
+  border-left:1px solid white;
 }

@@ -1,0 +1,97 @@
+.container
+  = partial "layouts/nav"
+  .content
+    .row
+      %h1
+        Headers
+
+    .row
+      %h2
+        Classic
+      .row
+        .col-md-12
+          %header.green
+            %ul
+              %li
+                Home
+              %li
+                About
+              %li
+                Contact
+      .row
+        .col-md-6
+          :code
+            # lang: html
+              <header>
+                <ul>
+                  <li>
+                    Home
+                  </li>
+                  <li>
+                    About
+                  </li>
+                  <li>
+                    Contact
+                  </li>
+                </ul>
+              </header>
+    .row
+      %h2
+        Right Aligned
+      .row
+        .col-md-12
+          %header.green.right-aligned-header
+            %ul
+              %li
+                Home
+              %li
+                About
+              %li
+                Contact
+      .row
+        .col-md-6
+          :code
+            # lang: html
+              <header class="right-aligned-header">
+                <ul>
+                  <li>
+                    Home
+                  </li>
+                  <li>
+                    About
+                  </li>
+                  <li>
+                    Contact
+                  </li>
+                </ul>
+              </header>
+    .row
+      %h2
+        Centered
+      .row
+        .col-md-12
+          %header.green.center-aligned-header
+            %ul
+              %li
+                Home
+              %li
+                About
+              %li
+                Contact
+      .row
+        .col-md-6
+          :code
+            # lang: html
+              <header class="center-aligned-header">
+                <ul>
+                  <li>
+                    Home
+                  </li>
+                  <li>
+                    About
+                  </li>
+                  <li>
+                    Contact
+                  </li>
+                </ul>
+              </header>

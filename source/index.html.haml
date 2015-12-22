@@ -1,20 +1,103 @@
 .container
   = partial "layouts/nav"
-
   .content
-    %h1
-      Static Pattern Bank
-    %p
-      This static pattern bank is a collection of HTML modules that are commonly used in venture websites. It is based on the concept of Atomic Design. A website can be quickly assembled using the 'Atoms', or basic building blocks. Read more about Atomic Design here. It relies on the on the Bootstrap Grid (grid-only). The pattern bank can be viewed at http://macphersonj.github.io/patterns/.
+    .row
+      %h1
+        The Grid
+      %p
+        The basis of the patterns is built around the Bootstrap Grid, found
+        = link_to "https://github.com/zirafa/bootstrap-grid-only", target: "_blank" do
+          here.
+        &nbsp;
+        The reason behind using the Bootstrap Grid is to be able to quickly assemble components from this library while being able to customise the design within a logical grid system. Bootstrap is used widely so there's a good chance of class name familiarity, it's well documented and supported and
+      %h2
+        The grid, visualised.
 
+    .row
+      .col-lg-12.grid-visualised
+        %code .col-lg-12
 
+    .row
+      .col-lg-6.grid-visualised
+        %code .col-lg-6
+      .col-lg-6.grid-visualised
+        %code .col-lg-6
 
-    :code
-      # lang: html
-      <html>
-        <body>
-          <div>
-            <h1>Hello World</h1>
+    .row
+      .col-lg-4.grid-visualised
+        %code .col-lg-4
+      .col-lg-4.grid-visualised
+        %code .col-lg-4
+      .col-lg-4.grid-visualised
+        %code .col-lg-4
+
+    .row
+      .col-lg-3.grid-visualised
+        %code .col-lg-3
+      .col-lg-3.grid-visualised
+        %code .col-lg-3
+      .col-lg-3.grid-visualised
+        %code .col-lg-3
+      .col-lg-3.grid-visualised
+        %code .col-lg-3
+
+    .row
+      .col-lg-2.grid-visualised
+        %code .col-lg-2
+      .col-lg-2.grid-visualised
+        %code .col-lg-2
+      .col-lg-2.grid-visualised
+        %code .col-lg-2
+      .col-lg-2.grid-visualised
+        %code .col-lg-2
+      .col-lg-2.grid-visualised
+        %code .col-lg-2
+      .col-lg-2.grid-visualised
+        %code .col-lg-2
+
+    .row
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+      .col-lg-1.grid-visualised
+
+    .row
+      %h2
+        The code
+      .col-lg-6
+        :code
+          # lang: html
+          <div class="row">
+            <div class="col-lg-6">
+              <!-- Content -->
+            </div>
+            <div class="col-lg-6">
+              <!-- Content -->
+            </div>
           </div>
-        </body>
-      </html>
+
+      .col-lg-6
+        %h3 Notes:
+        %p
+          Giving multiple classes to columns will give you control over your mobile views.
+          %br
+          %br
+          For example:
+          %br
+          %br
+          %code col-lg-6.col-md-6.col-sm-12.col-xs-12
+          %br
+          %br
+          Will yield two columns on large and medium screens (12/6 = 2), and one column stacked on small and extra small screens (12/12 = 1).
+          %br
+          %br
+          = link_to "https://getbootstrap.com/examples/grid/" do
+            Learn more about the Bootstrap grid.
