@@ -1,55 +1,30 @@
-###
-# Page options, layouts, aliases and proxies
-###
+# General Configurations
+activate :livereload
 
-# Per-page layout changes:
-#
-# With no layout
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+set :css_dir, 'css'
+set :js_dir, 'js'
+set :images_dir, 'images'
+set :relative_links, true
+activate :rouge_syntax
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown_engine, :redcarpet
 
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
+activate :directory_indexes
 
-# General configuration
+page "/feed.xml", layout: false
 
-# Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
-
-###
-# Helpers
-###
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
-# Build-specific configuration
+# Build-specific Configuration
 configure :build do
-  # Minify CSS on build
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_css
 end
 
-
+# Deploy Configuration
 activate :deploy do |deploy|
+  deploy.build_before = true
   deploy.method = :git
-  
-  # branch is optional (default is "gh-pages")
-  # run `git branch -a` to see a list of possible branches
-  deploy.branch = "gh-pages"
-
-  # strategy is optional (default is :force_push)
+  deploy.branch = 'gh-pages'
 end
+
+# Meta tags
+activate :meta_tags
