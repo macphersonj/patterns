@@ -4,17 +4,36 @@
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <meta charset='utf-8'>
     <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
-    <!-- Use title if it's in the page YAML frontmatter -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <title>Middleman</title>
     <link href="stylesheets/site.css" rel="stylesheet" type="text/css" />
     <script src="javascripts/all.js" type="text/javascript"></script>
   </head>
-  <body class='index'>
+  <body>
+    <header>
+      <div class='logo'>
+        <img src="images/logo.svg" />
+      </div>
+      <ul>
+        <li>
+          <a href="/">Patterns
+          </a>
+        </li>
+        <li>
+          <a href="about/">About
+          </a>
+        </li>
+      </ul>
+    </header>
     <div class='container'>
-      <nav>
+      <nav class='pattern-lib'>
         <ul>
           <li>
-            <a href="#">Headers
+            <a href="/">Grid
+            </a>
+          </li>
+          <li>
+            <a href="/headers">Headers
             </a>
           </li>
           <li>
@@ -32,13 +51,120 @@
         </ul>
       </nav>
       <div class='content'>
-        <h1>
-          Static Pattern Bank
-        </h1>
-        <p>
-          This static pattern bank is a collection of HTML modules that are commonly used in venture websites. It is based on the concept of Atomic Design. A website can be quickly assembled using the 'Atoms', or basic building blocks. Read more about Atomic Design here. It relies on the on the Bootstrap Grid (grid-only). The pattern bank can be viewed at http://macphersonj.github.io/patterns/.
-        </p>
-        <pre class="highlight html"><code><span class="nt">&lt;html&gt;</span>&#x000A;  <span class="nt">&lt;body&gt;</span>&#x000A;    <span class="nt">&lt;div&gt;</span>&#x000A;      <span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>&#x000A;    <span class="nt">&lt;/div&gt;</span>&#x000A;  <span class="nt">&lt;/body&gt;</span>&#x000A;<span class="nt">&lt;/html&gt;</span>&#x000A;</code></pre>
+        <div class='row'>
+          <h1>
+            The Grid
+          </h1>
+          <p>
+            The basis of the patterns is built around the Bootstrap Grid, found
+            <a target="_blank" href="https://github.com/zirafa/bootstrap-grid-only">here.
+            </a>
+            &nbsp;
+            The reason behind using the Bootstrap Grid is to be able to quickly assemble components from this library while being able to customise the design within a logical grid system. Bootstrap is used widely so there's a good chance of class name familiarity, it's well documented and supported and
+          </p>
+          <h2>
+            The grid, visualised.
+          </h2>
+        </div>
+        <div class='row'>
+          <div class='col-lg-12 grid-visualised'>
+            <code>.col-lg-12</code>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-lg-6 grid-visualised'>
+            <code>.col-lg-6</code>
+          </div>
+          <div class='col-lg-6 grid-visualised'>
+            <code>.col-lg-6</code>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-lg-4 grid-visualised'>
+            <code>.col-lg-4</code>
+          </div>
+          <div class='col-lg-4 grid-visualised'>
+            <code>.col-lg-4</code>
+          </div>
+          <div class='col-lg-4 grid-visualised'>
+            <code>.col-lg-4</code>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-lg-3 grid-visualised'>
+            <code>.col-lg-3</code>
+          </div>
+          <div class='col-lg-3 grid-visualised'>
+            <code>.col-lg-3</code>
+          </div>
+          <div class='col-lg-3 grid-visualised'>
+            <code>.col-lg-3</code>
+          </div>
+          <div class='col-lg-3 grid-visualised'>
+            <code>.col-lg-3</code>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-lg-2 grid-visualised'>
+            <code>.col-lg-2</code>
+          </div>
+          <div class='col-lg-2 grid-visualised'>
+            <code>.col-lg-2</code>
+          </div>
+          <div class='col-lg-2 grid-visualised'>
+            <code>.col-lg-2</code>
+          </div>
+          <div class='col-lg-2 grid-visualised'>
+            <code>.col-lg-2</code>
+          </div>
+          <div class='col-lg-2 grid-visualised'>
+            <code>.col-lg-2</code>
+          </div>
+          <div class='col-lg-2 grid-visualised'>
+            <code>.col-lg-2</code>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+          <div class='col-lg-1 grid-visualised'></div>
+        </div>
+        <div class='row'>
+          <h2>
+            The code
+          </h2>
+          <div class='col-lg-6'>
+            <pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>&#x000A;  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6"</span><span class="nt">&gt;</span>&#x000A;    <span class="c">&lt;!-- Content --&gt;</span>&#x000A;  <span class="nt">&lt;/div&gt;</span>&#x000A;  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-6"</span><span class="nt">&gt;</span>&#x000A;    <span class="c">&lt;!-- Content --&gt;</span>&#x000A;  <span class="nt">&lt;/div&gt;</span>&#x000A;<span class="nt">&lt;/div&gt;</span>&#x000A;&#x000A;</code></pre>
+          </div>
+          <div class='col-lg-6'>
+            <h3>Notes:</h3>
+            <p>
+              Giving multiple classes to columns will give you control over your mobile views.
+              <br>
+              <br>
+              For example:
+              <br>
+              <br>
+              <code>col-lg-6.col-md-6.col-sm-12.col-xs-12</code>
+              <br>
+              <br>
+              Will yield two columns on large and medium screens (12/6 = 2), and one column stacked on small and extra small screens (12/12 = 1).
+              <br>
+              <br>
+              <a href="https://getbootstrap.com/examples/grid/">Learn more about the Bootstrap grid.
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
