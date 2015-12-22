@@ -17,6 +17,8 @@ page "/feed.xml", layout: false
 # Build-specific Configuration
 configure :build do
   activate :minify_css
+  activate :relative_assets
+  activate :minify_javascript
 end
 
 # Deploy Configuration
