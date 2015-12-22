@@ -11,11 +11,7 @@ gem 'middleman-livereload', '~> 3.1.0'
 # For post summaries
 gem 'nokogiri', '~> 1.6.6.2'
 
-# Markdown to HTML Parsing
-gem 'redcarpet'
-
-# Syntax Highlighting
-gem 'middleman-rouge'
-
 # Meta tags for Frontmatter
 gem 'middleman-meta-tags'
+
+gem "middleman-syntax"

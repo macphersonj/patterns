@@ -1,3 +1,20 @@
 .container
-  %h1
-    Hello World
+  = partial "layouts/nav"
+
+  .content
+    %h1
+      Static Pattern Bank
+    %p
+      This static pattern bank is a collection of HTML modules that are commonly used in venture websites. It is based on the concept of Atomic Design. A website can be quickly assembled using the 'Atoms', or basic building blocks. Read more about Atomic Design here. It relies on the on the Bootstrap Grid (grid-only). The pattern bank can be viewed at http://macphersonj.github.io/patterns/.
+
+
+
+    :code
+      # lang: html
+      <html>
+        <body>
+          <div>
+            <h1>Hello World</h1>
+          </div>
+        </body>
+      </html>
